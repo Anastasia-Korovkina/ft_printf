@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_processor_unsign.c                              :+:      :+:    :+:   */
+/*   ft_processor_unsign_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wbeck <wbeck@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 14:46:37 by wbeck             #+#    #+#             */
-/*   Updated: 2021/12/08 14:49:57 by wbeck            ###   ########.fr       */
+/*   Updated: 2021/12/27 19:02:38 by wbeck            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	ft_processor_unsign(t_flags *s_flags, va_list	*argptr, int *len)
 {
 	unsigned int	copy_arg;
 	int				len_num;
-	
+
 	copy_arg = va_arg(*argptr, unsigned int);
 	len_num = ft_len_unsign(copy_arg);
 	if (s_flags->minus)

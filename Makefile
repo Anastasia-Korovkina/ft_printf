@@ -32,30 +32,24 @@ FLAGS	=	-Wall -Wextra -Werror
 RM		=	rm -rf
 
 all:		${NAME}
-			@make -C ./libft all
 
 ${NAME}: ${OBJS}
-			@make -C ./libft
-			ar rcs ${NAME} ${OBJS} ./libft/libft.a
+			ar rcs ${NAME} ${OBJS} 
 
 %.o:	%.c ${LIBH}
 			${CC} ${FLAGS} -c $< -o $@ 
 
-%_bonus.o:	%_bonus.c ${LIBH}
+%_bonus.o:	%_bonus.c ${B_LIBH}
 				${CC} ${FLAGS} -c $< -o $@ 
 
-bonus:	${B_OBJS}
-			@make -C ./libft
-			ar rcs ${NAME} ${B_OBJS} ./libft/libft.a
-
+bonus:	clean fclean
+			@make OBJS="${B_OBJS}" all
 
 clean:
 		${RM} ${OBJS} ${B_OBJS}
-		@make -C ./libft clean
 
 fclean:	clean
 		${RM} ${NAME}
-		@make -C ./libft fclean
 
 re:	fclean all
 
