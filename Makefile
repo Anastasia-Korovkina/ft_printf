@@ -4,18 +4,18 @@ SRCS	=	ft_printf.c \
 			ft_put_char_str_nbr_unsigned.c \
 			ft_put_hex_pointer.c
 
-B_SRCS	=	ft_check_and_proc_bonus.c \
-			ft_extra_bonus.c \
-			ft_lengths_bonus.c \
-			ft_printf_bonus.c \
-			ft_processor_int_bonus.c \
-			ft_processor_int_neg_bonus.c \
-			ft_processor_int_zero_bonus.c \
-			ft_processor_unsign_bonus.c \
-			ft_processor_hex_bonus.c \
-			ft_processor_hex_sub_bonus.c \
-			ft_processor_pers_char_str_p_bonus.c \
-			ft_put_smth_bonus.c 
+B_SRCS	=	bonus/ft_check_and_proc_bonus.c \
+			bonus/ft_extra_bonus.c \
+			bonus/ft_lengths_bonus.c \
+			bonus/ft_printf_bonus.c \
+			bonus/ft_processor_int_bonus.c \
+			bonus/ft_processor_int_neg_bonus.c \
+			bonus/ft_processor_int_zero_bonus.c \
+			bonus/ft_processor_unsign_bonus.c \
+			bonus/ft_processor_hex_bonus.c \
+			bonus/ft_processor_hex_sub_bonus.c \
+			bonus/ft_processor_pers_char_str_p_bonus.c \
+			bonus/ft_put_smth_bonus.c 
 
 OBJS	=	$(SRCS:.c=.o)
 

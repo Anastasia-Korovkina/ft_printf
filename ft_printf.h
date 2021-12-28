@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-void	ft_processor(char *format, va_list *argptr, int *len);
+void	ft_processor(char *format, va_list argptr, int *len);
 int		ft_printf(const char *format, ...);
 
 void	ft_putchar(int c, int *len);
