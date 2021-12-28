@@ -6,7 +6,7 @@
 /*   By: wbeck <wbeck@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 18:56:03 by wbeck             #+#    #+#             */
-/*   Updated: 2021/12/27 20:22:39 by wbeck            ###   ########.fr       */
+/*   Updated: 2021/12/28 19:13:28 by wbeck            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int	ft_printf(const char *format, ...)
 	va_list	argptr;
 	int		len;
 
+	len = 0;
 	va_start(argptr, format);
 	while (*format)
 	{

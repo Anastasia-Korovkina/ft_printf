@@ -1,8 +1,8 @@
 NAME	=	libftprintf.a
 
-SRCS	=	ft_printf.c \
-			ft_put_char_str_nbr_unsigned.c \
-			ft_put_hex_pointer.c
+SRCS	=	mandatory/ft_printf.c \
+			mandatory/ft_put_char_str_nbr_unsigned.c \
+			mandatory/ft_put_hex_pointer.c
 
 B_SRCS	=	bonus/ft_check_and_proc_bonus.c \
 			bonus/ft_extra_bonus.c \
@@ -21,9 +21,9 @@ OBJS	=	$(SRCS:.c=.o)
 
 B_OBJS	=	$(B_SRCS:.c=.o)
 
-LIBH	=	ft_printf.h
+LIBH	=	./mandatory/ft_printf.h
 
-B_LIBH	=	ft_printf_bonus.h
+B_LIBH	=	./bonus/ft_printf_bonus.h
 
 CC		=	gcc
 
@@ -34,7 +34,7 @@ RM		=	rm -rf
 all:		${NAME}
 
 ${NAME}: ${OBJS}
-			ar rcs ${NAME} ${OBJS} 
+			ar rcs ${NAME} $? 
 
 %.o:	%.c ${LIBH}
 			${CC} ${FLAGS} -c $< -o $@ 
